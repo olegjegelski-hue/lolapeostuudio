@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
@@ -13,13 +12,10 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
           <Link href="/" className="flex items-center">
-            <Image
+            <img
               src="/images/logo.png"
               alt="Lola Peostuudio logo"
-              width={120}
-              height={60}
               className="h-[7.5rem] w-auto object-contain"
-              priority
             />
           </Link>
 

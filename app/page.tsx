@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 const newOffers = [
@@ -107,11 +106,9 @@ export default function Home() {
           <div className="flex flex-col-reverse lg:flex-row lg:flex-row-reverse items-center gap-8">
             <div className="lg:w-1/3 flex justify-center">
               <Link href="/meist" className="block">
-                <Image
+                <img
                   src="/images/500030144-18061603913145287-42254426651713674-n.jpeg"
                   alt="Lola"
-                  width={400}
-                  height={500}
                   className="w-full max-w-sm object-cover rounded"
                 />
               </Link>
@@ -152,11 +149,10 @@ export default function Home() {
                 className="group block bg-[#232323] border border-gray-700 rounded overflow-hidden hover:shadow-lg hover:border-[#bc9c22]/50 transition-all"
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
-                  <Image
+                  <img
                     src={offer.image}
                     alt={offer.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4">
@@ -184,11 +180,10 @@ export default function Home() {
                 className="group block"
               >
                 <div className="relative overflow-hidden rounded-t-lg aspect-[4/3]">
-                  <Image
+                  <img
                     src={service.image}
                     alt={service.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute bottom-0 right-0 w-12 h-12 bg-[#f5d038] flex items-center justify-center rounded-tl-full opacity-90 group-hover:opacity-100">
                     <svg
