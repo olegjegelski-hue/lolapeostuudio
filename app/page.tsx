@@ -207,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* Contact form (form2) */}
-      <section className="py-12 md:py-16 bg-[#1a1a1a]">
+      <section id="form" className="py-12 md:py-16 bg-[#1a1a1a]">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <ContactForm />
         </div>
