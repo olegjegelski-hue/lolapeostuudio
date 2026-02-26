@@ -100,9 +100,9 @@ const services = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#111111]">
       {/* Hero - Natuke minust (header02) */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20 bg-[#111111]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col-reverse lg:flex-row lg:flex-row-reverse items-center gap-8">
             <div className="lg:w-1/3 flex justify-center">
@@ -117,10 +117,10 @@ export default function Home() {
               </Link>
             </div>
             <div className="lg:w-2/3">
-              <h1 className="font-dancing text-4xl md:text-5xl lg:text-6xl text-[#232323] mb-6">
+              <h1 className="font-dancing text-4xl md:text-5xl lg:text-6xl text-[#fafafa] mb-6">
                 Natuke minust
               </h1>
-              <p className="text-[#232323] text-base md:text-lg leading-relaxed mb-6">
+              <p className="text-[#e5e5e5] text-base md:text-lg leading-relaxed mb-6">
                 Hei-hei! Mina olen Elora (hüüdnimega siis Lola), olen noor
                 ettevõtja, kes on peokorraldus-maailmas tegutsenud juba pea 12
                 aastat.. uskumatu, eksole? Nagu mulle kord öeldi.. &quot;vanust
@@ -139,9 +139,9 @@ export default function Home() {
       </section>
 
       {/* UUED PAKKUMISED (pricing3) */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-[#111111]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#232323] mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#fafafa] mb-10">
             UUED PAKKUMISED!!
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -149,7 +149,7 @@ export default function Home() {
               <Link
                 key={i}
                 href={offer.href}
-                className="group block bg-white border border-gray-200 rounded overflow-hidden hover:shadow-lg transition-shadow"
+                className="group block bg-[#232323] border border-gray-700 rounded overflow-hidden hover:shadow-lg hover:border-[#bc9c22]/50 transition-all"
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <Image
@@ -160,7 +160,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-[#232323] text-base md:text-lg">
+                  <h3 className="font-semibold text-[#fafafa] text-base md:text-lg">
                     {offer.title}
                   </h3>
                 </div>
@@ -171,9 +171,9 @@ export default function Home() {
       </section>
 
       {/* Teeme Sinu sündmusest unustamatu elamuse! (content4 + features4) */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-[#111111]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-dancing text-3xl md:text-4xl lg:text-5xl text-center text-[#232323] mb-12">
+          <h2 className="font-dancing text-3xl md:text-4xl lg:text-5xl text-center text-[#fafafa] mb-12">
             Teeme Sinu sündmusest unustamatu elamuse!
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -200,8 +200,8 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                <div className="bg-white p-4 border border-t-0 border-gray-200 rounded-b-lg">
-                  <p className="text-[#232323] font-medium text-sm md:text-base">
+                <div className="bg-[#232323] p-4 border border-t-0 border-gray-700 rounded-b-lg">
+                  <p className="text-[#fafafa] font-medium text-sm md:text-base">
                     {service.title}
                   </p>
                 </div>
@@ -212,30 +212,30 @@ export default function Home() {
       </section>
 
       {/* Contact form (form2) */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-[#1a1a1a]">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <ContactForm />
         </div>
       </section>
 
       {/* Contact info - Peoteenused */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-[#111111]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-xl font-bold text-[#232323] mb-6">
+          <h3 className="text-xl font-bold text-[#fafafa] mb-6">
             Peoteenused
           </h3>
           <a
             href="tel:+37258607141"
-            className="text-2xl font-bold text-[#232323] hover:text-[#bc9c22] block mb-4 transition-colors"
+            className="text-2xl font-bold text-[#fafafa] hover:text-[#f5d038] block mb-4 transition-colors"
           >
             +372 5860 7141
           </a>
-          <h3 className="text-xl font-bold text-[#232323] mb-2 mt-8">
+          <h3 className="text-xl font-bold text-[#fafafa] mb-2 mt-8">
             Dekoratsioonid
           </h3>
           <a
             href="tel:+3725141705"
-            className="text-2xl font-bold text-[#232323] hover:text-[#bc9c22] block transition-colors"
+            className="text-2xl font-bold text-[#fafafa] hover:text-[#f5d038] block transition-colors"
           >
             +372 514 1705
           </a>

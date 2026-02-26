@@ -12,10 +12,21 @@ Koduleht [lolapeostuudio.ee](https://lolapeostuudio.ee) koopia – peokorraldus 
 
 ```bash
 npm install
+./scripts/download-images.sh   # Laeb pildid ja logo lolapeostuudio.ee lehelt
 npm run dev
 ```
 
 Avage [http://localhost:3000](http://localhost:3000)
+
+### Pildid ja logo
+
+Pildid tuleb kopeerida kodulehelt lolapeostuudio.ee. Käivita:
+
+```bash
+./scripts/download-images.sh
+```
+
+See laeb kõik pildid (logo, teenuste pildid jms) kausta `public/images/`.
 
 ## Lehed
 

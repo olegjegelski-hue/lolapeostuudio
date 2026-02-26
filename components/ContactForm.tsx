@@ -23,8 +23,8 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-8 border border-gray-200">
-      <h3 className="text-2xl font-bold text-[#232323] mb-2">
+    <div className="bg-[#232323] rounded-lg shadow-md p-8 border border-gray-700">
+      <h3 className="text-2xl font-bold text-[#fafafa] mb-2">
         Räägi meile oma ideest ning leiame lahenduse!
       </h3>
       <form onSubmit={handleSubmit} className="space-y-4 mt-6">
@@ -35,7 +35,7 @@ export default function ContactForm() {
               name="name"
               required
               placeholder="Nimi"
-              className="w-full px-4 py-3 border border-gray-300 rounded text-[#232323] focus:ring-2 focus:ring-[#f5d038] focus:border-[#f5d038]"
+              className="w-full px-4 py-3 border border-gray-600 rounded bg-[#1a1a1a] text-[#fafafa] placeholder-gray-500 focus:ring-2 focus:ring-[#f5d038] focus:border-[#f5d038]"
             />
           </div>
           <div>
@@ -44,7 +44,7 @@ export default function ContactForm() {
               name="email"
               required
               placeholder="Email"
-              className="w-full px-4 py-3 border border-gray-300 rounded text-[#232323] focus:ring-2 focus:ring-[#f5d038] focus:border-[#f5d038]"
+              className="w-full px-4 py-3 border border-gray-600 rounded bg-[#1a1a1a] text-[#fafafa] placeholder-gray-500 focus:ring-2 focus:ring-[#f5d038] focus:border-[#f5d038]"
             />
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function ContactForm() {
             rows={4}
             required
             placeholder="Sõnum"
-            className="w-full px-4 py-3 border border-gray-300 rounded text-[#232323] focus:ring-2 focus:ring-[#f5d038] focus:border-[#f5d038]"
+            className="w-full px-4 py-3 border border-gray-600 rounded bg-[#1a1a1a] text-[#fafafa] placeholder-gray-500 focus:ring-2 focus:ring-[#f5d038] focus:border-[#f5d038]"
           />
         </div>
         <button

@@ -9,7 +9,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
+    <nav className="bg-[#111111] shadow-sm sticky top-0 z-50 border-b border-gray-700">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
           <Link href="/" className="flex items-center">
@@ -27,27 +27,27 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/"
-              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+              className="text-[#fafafa] hover:text-[#f5d038] font-medium transition-colors text-base"
             >
               Esileht
             </Link>
             <div className="relative group">
               <Link
                 href="/lastele"
-                className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base flex items-center"
+                className="text-[#fafafa] hover:text-[#f5d038] font-medium transition-colors text-base flex items-center"
               >
                 Lastele
               </Link>
-              <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded shadow-lg border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+              <div className="absolute top-full left-0 mt-1 w-48 bg-[#232323] rounded shadow-lg border border-gray-700 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                 <Link
                   href="/lastele"
-                  className="block px-4 py-2 text-[#232323] hover:bg-[#f5d038]/10 hover:text-[#bc9c22]"
+                  className="block px-4 py-2 text-[#fafafa] hover:bg-[#f5d038]/20 hover:text-[#f5d038]"
                 >
                   Teenused
                 </Link>
                 <Link
                   href="/pakkumised"
-                  className="block px-4 py-2 text-[#232323] hover:bg-[#f5d038]/10 hover:text-[#bc9c22]"
+                  className="block px-4 py-2 text-[#fafafa] hover:bg-[#f5d038]/20 hover:text-[#f5d038]"
                 >
                   PAKKUMISED
                 </Link>
@@ -55,25 +55,25 @@ export default function Navigation() {
             </div>
             <Link
               href="/taiskasvanutele"
-              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+              className="text-[#fafafa] hover:text-[#f5d038] font-medium transition-colors text-base"
             >
               Täiskasvanutele
             </Link>
             <Link
               href="/ohupallid"
-              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+              className="text-[#fafafa] hover:text-[#f5d038] font-medium transition-colors text-base"
             >
               Õhupallid
             </Link>
             <Link
               href="/fotosessioonid"
-              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+              className="text-[#fafafa] hover:text-[#f5d038] font-medium transition-colors text-base"
             >
               UUS! Fotosessioonid!
             </Link>
             <Link
               href="/koostood"
-              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+              className="text-[#fafafa] hover:text-[#f5d038] font-medium transition-colors text-base"
             >
               KOOSTÖÖD
             </Link>
@@ -82,7 +82,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-[#232323] hover:text-[#bc9c22]"
+            className="md:hidden p-2 text-[#fafafa] hover:text-[#f5d038]"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -90,52 +90,52 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 border-t border-gray-100 pt-4">
+          <div className="md:hidden pb-4 space-y-2 border-t border-gray-700 pt-4">
             <Link
               href="/"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Esileht
             </Link>
             <Link
               href="/lastele"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Lastele
             </Link>
             <Link
               href="/taiskasvanutele"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Täiskasvanutele
             </Link>
             <Link
               href="/ohupallid"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Õhupallid
             </Link>
             <Link
               href="/fotosessioonid"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Fotosessioonid
             </Link>
             <Link
               href="/koostood"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Koostööd
             </Link>
             <Link
               href="/pakkumised"
-              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              className="block py-2 text-[#fafafa] hover:text-[#f5d038]"
               onClick={() => setIsOpen(false)}
             >
               Pakkumised
