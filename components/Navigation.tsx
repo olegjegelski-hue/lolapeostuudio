@@ -2,74 +2,87 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-pink-200">
+    <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <Link
-            href="/"
-            className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity"
-          >
-            Lola Peostuudio
+        <div className="flex justify-between items-center py-3">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Lola Peostuudio logo"
+              width={120}
+              height={60}
+              className="h-[7.5rem] w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/"
-              className="text-gray-700 hover:text-pink-500 font-medium transition-colors"
+              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
             >
               Esileht
             </Link>
-            <Link
-              href="/lastele"
-              className="text-gray-700 hover:text-pink-500 font-medium transition-colors"
-            >
-              Lastele
-            </Link>
             <div className="relative group">
-              <button className="text-gray-700 hover:text-pink-500 font-medium transition-colors flex items-center gap-1">
-                Teenused
-                <span className="text-xs font-bold text-pink-500">PAKKUMISED</span>
-              </button>
-              <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-pink-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <Link
+                href="/lastele"
+                className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base flex items-center"
+              >
+                Lastele
+              </Link>
+              <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded shadow-lg border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                 <Link
-                  href="/taiskasvanutele"
-                  className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600"
+                  href="/lastele"
+                  className="block px-4 py-2 text-[#232323] hover:bg-[#f5d038]/10 hover:text-[#bc9c22]"
                 >
-                  Täiskasvanutele
+                  Teenused
                 </Link>
                 <Link
-                  href="/ohupallid"
-                  className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600"
+                  href="/pakkumised"
+                  className="block px-4 py-2 text-[#232323] hover:bg-[#f5d038]/10 hover:text-[#bc9c22]"
                 >
-                  Õhupallid
-                </Link>
-                <Link
-                  href="/fotosessioonid"
-                  className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600"
-                >
-                  UUS! Fotosessioonid!
-                </Link>
-                <Link
-                  href="/koostood"
-                  className="block px-4 py-2 text-gray-700 hover:bg-pink-50 hover:text-pink-600"
-                >
-                  KOOSTÖÖD
+                  PAKKUMISED
                 </Link>
               </div>
             </div>
+            <Link
+              href="/taiskasvanutele"
+              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+            >
+              Täiskasvanutele
+            </Link>
+            <Link
+              href="/ohupallid"
+              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+            >
+              Õhupallid
+            </Link>
+            <Link
+              href="/fotosessioonid"
+              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+            >
+              UUS! Fotosessioonid!
+            </Link>
+            <Link
+              href="/koostood"
+              className="text-[#232323] hover:text-[#bc9c22] font-medium transition-colors text-base"
+            >
+              KOOSTÖÖD
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-pink-500"
+            className="md:hidden p-2 text-[#232323] hover:text-[#bc9c22]"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -77,48 +90,55 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 border-t border-pink-100 pt-4">
+          <div className="md:hidden pb-4 space-y-2 border-t border-gray-100 pt-4">
             <Link
               href="/"
-              className="block py-2 text-gray-700 hover:text-pink-500"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
               onClick={() => setIsOpen(false)}
             >
               Esileht
             </Link>
             <Link
               href="/lastele"
-              className="block py-2 text-gray-700 hover:text-pink-500"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
               onClick={() => setIsOpen(false)}
             >
               Lastele
             </Link>
             <Link
               href="/taiskasvanutele"
-              className="block py-2 text-gray-700 hover:text-pink-500"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
               onClick={() => setIsOpen(false)}
             >
               Täiskasvanutele
             </Link>
             <Link
               href="/ohupallid"
-              className="block py-2 text-gray-700 hover:text-pink-500"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
               onClick={() => setIsOpen(false)}
             >
               Õhupallid
             </Link>
             <Link
               href="/fotosessioonid"
-              className="block py-2 text-gray-700 hover:text-pink-500"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
               onClick={() => setIsOpen(false)}
             >
               Fotosessioonid
             </Link>
             <Link
               href="/koostood"
-              className="block py-2 text-gray-700 hover:text-pink-500"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
               onClick={() => setIsOpen(false)}
             >
               Koostööd
+            </Link>
+            <Link
+              href="/pakkumised"
+              className="block py-2 text-[#232323] hover:text-[#bc9c22]"
+              onClick={() => setIsOpen(false)}
+            >
+              Pakkumised
             </Link>
           </div>
         )}

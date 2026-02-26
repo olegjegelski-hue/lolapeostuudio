@@ -8,13 +8,18 @@ export const metadata: Metadata = {
 
 export default function TaiskasvanutelePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-purple-50/30 py-16">
+    <div className="min-h-screen bg-white py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">Täiskasvanutele</h1>
-        <p className="text-lg text-gray-600 mb-8">
+        <h1 className="font-dancing text-4xl md:text-5xl font-bold text-[#232323] mb-6">
+          Täiskasvanutele
+        </h1>
+        <p className="text-lg text-[#232323] mb-8">
           Siin lehel on täiskasvanute sündmuste pakkumised. (Sisu tuleb täiendada.)
         </p>
-        <Link href="/" className="text-pink-600 font-semibold hover:underline">
+        <Link
+          href="/"
+          className="text-[#bc9c22] font-semibold hover:text-[#735f15] hover:underline"
+        >
           ← Tagasi esilehele
         </Link>
       </div>
